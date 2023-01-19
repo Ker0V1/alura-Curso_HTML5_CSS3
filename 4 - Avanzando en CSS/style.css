@@ -1,0 +1,284 @@
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+header {
+    background-color: #CCCCCC;
+}
+
+.caja {
+    width: 70%;
+    position: relative;
+    margin: 0 auto;
+}
+
+nav {
+    position:  absolute;
+    top: 110px;
+    right: 0;
+}
+nav li{
+    
+    display: inline;
+    margin-left: 15px;
+}
+
+nav a {
+    text-transform: uppercase;
+    color: black;
+    font-weight: bold;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #C78c19;
+}
+
+.productos {
+    width: 70%;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+.productos li {
+    display: inline-block;
+    text-align: center;
+    width: 30%;
+    vertical-align: top;
+    margin: 1.5%;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 10px;
+    
+}
+
+.productos li:hover {
+    border-color: #C78c19;
+}
+
+.productos li:active {
+    border-color: #098c19;
+}
+
+.productos h2 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.productos li:hover h2 {
+    font-size: 33px;
+}
+
+.producto-descripcion {
+    font-size: 18px;
+}
+
+.producto-precio {
+    font-size: 20px ;
+    font-weight: bold;
+    margin-top: 10px ;
+
+}
+
+footer {
+    text-align: center;
+    background: url(src/img/bg.jpg); /*para agregar una imagen como colo de fondo*/
+    padding: 40px; 
+    
+}
+
+.copyright {
+    color: white;
+    font-size: 13px;
+    margin: 20px;
+}
+
+.mainContacto {
+    width: 70%;
+    margin: 0 auto;
+}
+form {
+    margin: 40px 0;
+}
+
+form label, fieldset legend {
+    display: block;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.input-padron {
+    display: block;
+    margin-bottom: 20px;
+    padding: 10px 25px;
+    width: 50%;
+}
+
+.checkbox {
+    margin: 20px 0;
+}
+
+.enviar {
+    width: 40%;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background-color: orange;
+    border: 0;
+    border-radius: 5px;
+    /*transition: background 1s;  indica que si el background cambia entonces se hara una transicion de ese cambio que dure 1 segundo*/
+    transition: all 1s;
+    cursor: pointer /*cambia el tipo del puntero*/
+}
+
+.enviar:hover {
+    background-color: darkorange;
+    transform: scale(1.2); /*permite modificar la escala de tamaño del objeto*/
+}
+
+table{
+    margin: 40px;
+}
+
+thead {
+    background-color: #555555;
+    color: white;
+    font-weight: bold;
+}
+
+td, th {
+    border: 1px solid black ;
+    padding: 8px 15px;
+}
+
+/* CSS de Home */
+
+.banner {
+    width: 100%;
+}
+
+/* pseudo elementos interesantes 
+
+.titulo:first-letter {
+    font-weight: bold;
+}
+
+p:first-line {
+    font-style: italic;
+} */
+
+.titulo {
+    text-align: center;
+    font-size: 2em; /* esto le dice al navegador que el tamaño debe ser igual a 2 veces el tamaño de la fuente del navegador*/
+    margin-bottom: 1em;
+    clear: left;
+}
+
+.principal {
+    background-color: #FEFEFE;
+    padding: 3em 0;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.principal p {
+    margin-bottom: 1em;
+
+}
+
+.principal strong{
+    font-weight: bold;
+}
+
+.principal em {
+    font-style: italic;
+}
+
+.utensilios {
+    width: 120px;
+    float: left; /*para que la imagen se alinee a la izquierda y todo el contenido que venga despues rodee la imagen*/
+    margin: 0 20px 20px 0;
+}
+
+.mapa {
+    padding: 3em;
+    background: linear-gradient(#FEFEFE, #888888);
+}
+
+.mapa p {
+    margin-bottom: 2em;
+    text-align: center;
+}
+
+.mapa-contenido {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.diferenciales {
+    background-color: #888888;
+    padding: 3em 0;
+}
+
+.contenido-diferenciales {
+    width: 640px;
+    margin: 0 auto;
+}
+
+.lista-diferenciales {
+    width: 40%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.items:first-child {/*pseudo clase de items*/
+    font-weight: bold;
+}
+
+.items:before{
+    content: "✦"; /*Agregamos una estrella al inicio de cada item de la lista*/
+}
+
+.items {
+    line-height: 1.5;
+}
+
+.imagen-diferenciales {
+    width: 60%;
+    transition: opacity 400ms ;
+    box-shadow: 10px 10px 30px 15px black;
+}
+
+.imagen-diferenciales:hover {
+    opacity: 0.3;
+}
+
+.video {
+    margin: 1em auto;
+    width: 560px;
+}
+
+@media screen and (max-width: 400px) {/*Para crear excepciones con condiciones en los estilos*/
+    h1 {
+        text-align: center;
+    }
+
+    nav {
+        position: static;
+    }
+    
+    .caja, .principal, .mapa-contenido, .contenido-diferenciales,.video{
+        width: auto;
+    }
+
+    .diferenciales, .imagen-diferenciales,  .productos li, .enviar {
+        width: 100%;
+    }
+
+}
